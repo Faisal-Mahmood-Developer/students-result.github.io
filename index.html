@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Students Result</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+
+
+                <h2 class="text-danger text-center">Students Result Card</h2><br><br>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModalbbb">
+                    Add Numbers
+                </button>
+                <br><br>
+                <p class="text-center">Each subject 100 total marks</p>
+            </div>
+           
+            <!-- The Modal -->
+            <div class="modal fade" id="myModalbbb">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Result card</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+
+                            <form id="form">
+                                <input type="number" class="form-control" min="0" id="number" placeholder="Enter roll number">
+                                <br>
+                                <input type="text" class="form-control" id="name" placeholder="Name"> <br>
+                                <input type="number" class="form-control" min="0" id="English" placeholder="English Number">
+                                <br>
+                                <input type="number" class="form-control" min="0" id="Physics" placeholder="Physics Number">
+                                <br>
+                                <input type="number" class="form-control" min="0" id="History" placeholder="History Number">
+                                <br>
+                                <input type="number" class="form-control" min="0" id="Math" placeholder="Math Number">
+                                <br>
+                                <input type="number" class="form-control" min="0" id="Chemistry" placeholder="Chemistry Number">
+                
+                            </form>
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger"  onclick="taskFunction(event)"data-bs-dismiss="modal">Add Numbers</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- <button type="button" class="btn btn-primary" onclick="taskFunction(event)">click me</button> -->
+
+            <br>
+            <br>
+            <table class="table table-bordered border-danger" id="myTable">
+                <thead class="bg-info">
+                    <tr>
+                        <th>#No</th>
+                        <th> Name</th>
+                        <th>English</th>
+                        <th>Physics</th>
+                        <th>History</th>
+                        <th>Math</th>
+                        <th>Chemistry</th>
+                        <th>Total</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody id="table_data">
+
+                </tbody>
+            </table>
+
+        </div>
+        <div class="col-2"></div>
+    </div>
+    </div>
+    <script src="./this.js"></script>
+</body>
+
+</html>
